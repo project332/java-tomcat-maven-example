@@ -1,0 +1,19 @@
+- name: dockerplaybook
+  hosts: localhost
+ # become: true
+  tasks:
+    - name: docker_login
+      ansible.builtin.shell:
+         cmd: ansible all -m ping -i hosts
+         cmd: echo dckr_pat_zDHaCxJBY6wl3XoT4YJ71eRBEFM | docker login -u bharattarun --password-stdin
+   # - name: docker_py
+     # pip:
+    #    name: docker-py
+     #   state: present
+    - name: docker_image
+      community.docker.docker_image:
+        build:
+          path: .
+        name: tarun
+        source: build
+        tag: 1
