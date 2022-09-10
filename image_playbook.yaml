@@ -14,6 +14,7 @@
       community.docker.docker_image:
         build:
           path: .
-        name: tarun
+        name: bharattarun/ansible_tomcat
         source: build
         tag: 1
+        push: yes
