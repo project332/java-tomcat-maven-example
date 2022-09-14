@@ -1,5 +1,5 @@
 - name: docker_deploy
-  hosts: all
+  hosts: servers
   tasks:
    - name: docker_login
      ansible.builtin.shell:
