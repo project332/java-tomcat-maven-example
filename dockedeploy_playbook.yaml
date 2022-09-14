@@ -5,4 +5,6 @@
      ansible.builtin.shell:
         cmd: echo dckr_pat_zDHaCxJBY6wl3XoT4YJ71eRBEFM | docker login -u bharattarun --password-stdin
    - name: pulling_image_dockerhub
+     command: docker rmi bharattarun/ansible_tomcat:1
      command: docker run -u 0 -p 8080:8080 --name=examoletom  bharattarun/ansible_tomcat:1
+     
